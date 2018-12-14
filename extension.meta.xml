@@ -15,6 +15,9 @@
 		</author>
 	</authors>
 	<releases>
+		<release version="1.0.1" date="2018-12-14" min="4.0.0">
+			- Changed Symphony.Author for Symphony.Context.get('user')
+		</release>
 		<release version="1.0.0" date="2018-12-11" min="4.0.0"/>
 	</releases>
 </extension>
