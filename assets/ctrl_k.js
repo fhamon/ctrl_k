@@ -6,9 +6,7 @@
 
 	var placeholders = [
 		'Switch to...',
-		'Swwwwwwwwwwwwwwwwwwwwwitch to...',
 		'Jump to...',
-		'Juuuuuuuuuuuuuuuuuuuuuuump to...',
 		'Hyperdrive to...'
 	];
 
