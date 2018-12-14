@@ -59,16 +59,13 @@
 			path: 'system/log/',
 			system: true,
 			devOnly: true
+		},
+		{
+			name: S.Context.get('user').username,
+			path: '/system/authors/edit/' + S.Context.get('user').id,
+			system: true
 		}
 	];
-
-	if (!!S.Author) {
-		sections.push({
-			name: S.Author.username,
-			path: '/system/authors/edit/' + S.Author.id,
-			system: true
-		});
-	}
 
 	var sels = {
 		ctn: '#ctrl_k',
@@ -134,7 +131,7 @@
 					query = !!editMode && editMode.length === 2 ? query.replace(editMode[1], '') : query;
 
 					$.each(sections, function (index, element) {
-						if (element.name.toLowerCase().indexOf(query) >= 0 && (!element.devOnly || S.Author.userType === 'developer')) {
+						if (element.name.toLowerCase().indexOf(query) >= 0 && (!element.devOnly || S.Context.get('user').type === 'developer')) {
 							element.new = !!newMode && newMode.length === 2;
 							element.edit = !!editMode && editMode.length === 2;
 							if (!element.edit || !element.system) {
@@ -155,7 +152,7 @@
 		}]).on('autocomplete:selected', function(event, suggestion, dataset, context) {
 			var url = S.Context.get('symphony');
 
-			if (!!suggestion.edit && (!!S.Author && S.Author.userType === 'developer')) {
+			if (!!suggestion.edit && S.Context.get('user').type === 'developer') {
 				url += '/blueprints/sections/edit/' + suggestion.id + '/';
 			} else{
 				if (!!suggestion.system) {
