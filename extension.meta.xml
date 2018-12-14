@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension id="ctrl_k" status="released" xmlns="http://symphony-cms.com/schemas/extension/1.0">
+	<name>CTRL + K</name>
+	<description>A suuuuuuuuuuuuuuuuuuuuuuuuuuuuuper fast way to navigate in Symphony</description>
+	<types>
+		<type>Navigation</type>
+	</types>
+	<authors>
+		<author>
+			<name github="fhamon" symphony="fhamon" twitter="FrederickHamon">Frédérick Hamon</name>
+		</author>
+		<author>
+			<name github="DeuxHuitHuit" symphony="nitriques" twitter="DeuxHuitHuit">Deux Huit Huit</name>
+			<website>https://deuxhuithuit.com/</website>
+		</author>
+	</authors>
+	<releases>
+		<release version="1.0.0" date="2018-12-11" min="4.0.0"/>
+	</releases>
+</extension>
