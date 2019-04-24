@@ -61,7 +61,7 @@
 			devOnly: true
 		},
 		{
-			name: S.Context.get('user').username || 'Me',
+			name: S.Context.get('user').username,
 			path: '/system/authors/edit/' + S.Context.get('user').id,
 			system: true
 		}
@@ -107,7 +107,7 @@
 	};
 
 	var render = function () {
-		var ctn = $('<div />').attr('id', 'ctrl_k');
+		var ctn = $('<div />').attr('id', 'ctrl_k').append($('<div class="ctrl_k-bg"/>'));
 		var input = $('<input />').addClass(sels.input.replace('.', '')).attr({
 			type: 'text'
 		});
