@@ -61,7 +61,7 @@
 			devOnly: true
 		},
 		{
-			name: S.Context.get('user').username,
+			name: S.Context.get('user').username || 'Me',
 			path: '/system/authors/edit/' + S.Context.get('user').id,
 			system: true
 		}
