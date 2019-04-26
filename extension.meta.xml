@@ -16,7 +16,7 @@
 	</authors>
 	<releases>
 		<release version="2.0.0" date="2019-04-24" min="4.0.0">
-			- Complete rework of the interface for the new Symphony 4 RC3
+			- Complete rework of the interface for Symphony 4 alpha 3
 			- Changed Symphony.Author for Symphony.Context.get('user')
 			- Fixed undef username for "me" section
 		</release>
